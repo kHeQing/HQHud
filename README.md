@@ -1,9 +1,9 @@
 # HQHud
-Swift Hud 最简菊花转 
+Swift Hud 最简菊花转 方便拓展功能
+
+UIView的extension
 
 ```Swift
-extension UIView {
-    
     func showHud(isCovered: Bool = false) {
         
         self.hideHud()
@@ -38,8 +38,36 @@ extension UIView {
         guard let backv = backV else { return }
         backv.removeFromSuperview()
     }
+```
+
+使用
+
+```Swift
+     @IBAction func showHud(_ sender: UIButton) {
+        
+        view.showHud()
+    }
     
-}
+    @IBAction func hideHud(_ sender: UIButton) {
+        
+        view.hideHud()
+    }
+    
+    @IBAction func showHudCoveredWindow(_ sender: UIButton) {
+        
+        Hud_Window?.showHud(isCovered: true)
+        
+        // 5秒消失
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            Hud_Window?.hideHud()
+        }
+    }
+    
+    @IBAction func showHudCoveredView(_ sender: UIButton) {
+        
+        view.showHud(isCovered: true)
+    }
+    
 ```
 
 ![](https://github.com/kHeQing/HQHud/blob/master/01.png)
