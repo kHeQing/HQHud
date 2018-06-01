@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cqP-wS-fd7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="qVI-VB-DzT">
+            <objects>
+                <navigationController id="cqP-wS-fd7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="v0i-2o-9Cb">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="W6w-kv-zyO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rCq-42-AVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-409" y="-53"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HQHud" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hp-qN-jSS">
+                                <rect key="frame" x="112" y="598" width="150" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Stv-bG-6D2"/>
+                                    <constraint firstAttribute="height" constant="49" id="UTZ-w6-mho"/>
+                                </constraints>
+                                <state key="normal" title="有蒙版的hud"/>
+                                <connections>
+                                    <segue destination="wfY-v7-JFg" kind="show" id="SYg-GE-LLF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWy-ho-UDJ">
+                                <rect key="frame" x="0.0" y="517" width="187.5" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ygd-Hu-TXy"/>
+                                </constraints>
+                                <state key="normal" title="showHud"/>
+                                <connections>
+                                    <action selector="showHud:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZcJ-xg-Sbv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8m-eH-R7U">
+                                <rect key="frame" x="187.5" y="517" width="187.5" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aP0-b0-Uch"/>
+                                </constraints>
+                                <state key="normal" title="hideHud"/>
+                                <connections>
+                                    <action selector="hideHud:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tEF-MU-CZx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cWy-ho-UDJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bsc-jH-dZu"/>
+                            <constraint firstItem="V8m-eH-R7U" firstAttribute="bottom" secondItem="cWy-ho-UDJ" secondAttribute="bottom" id="L3s-Bm-FWq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V8m-eH-R7U" secondAttribute="trailing" id="MfG-dt-6cf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2hp-qN-jSS" secondAttribute="bottom" constant="20" id="UiY-Ws-M9l"/>
+                            <constraint firstItem="2hp-qN-jSS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UjF-Kj-LaN"/>
+                            <constraint firstItem="V8m-eH-R7U" firstAttribute="leading" secondItem="cWy-ho-UDJ" secondAttribute="trailing" id="kCS-8x-im5"/>
+                            <constraint firstItem="cWy-ho-UDJ" firstAttribute="width" secondItem="V8m-eH-R7U" secondAttribute="width" id="lwM-Yt-U00"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cWy-ho-UDJ" secondAttribute="bottom" constant="100" id="pbc-Eo-chh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tAh-3g-uoA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="274" y="-54"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="UK4-KR-v8V">
+            <objects>
+                <viewController id="wfY-v7-JFg" customClass="SecondViewController" customModule="HQHud" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cId-Pm-Abh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2P-Py-QLD">
+                                <rect key="frame" x="83" y="485" width="209" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1kh-Mj-OpC"/>
+                                </constraints>
+                                <state key="normal" title="showHudCoveredWindow"/>
+                                <connections>
+                                    <action selector="showHudCoveredWindow:" destination="wfY-v7-JFg" eventType="touchUpInside" id="ZVl-LG-uAR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EX4-hQ-se3">
+                                <rect key="frame" x="83" y="555" width="209" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ue4-dS-1wu"/>
+                                </constraints>
+                                <state key="normal" title="showHudCoveredView"/>
+                                <connections>
+                                    <action selector="showHudCoveredView:" destination="wfY-v7-JFg" eventType="touchUpInside" id="UvA-My-ami"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="view覆盖可以点击返回按钮" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySt-3y-APN">
+                                <rect key="frame" x="94" y="526" width="208" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="xSa-Rj-xke"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全屏覆盖点击不了返回按钮" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="482-Bo-Yj5">
+                                <rect key="frame" x="94" y="456" width="208" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="fg0-jb-196"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="K2P-Py-QLD" firstAttribute="leading" secondItem="qfL-YU-npz" secondAttribute="leading" constant="83" id="21S-jm-5tm"/>
+                            <constraint firstItem="482-Bo-Yj5" firstAttribute="leading" secondItem="qfL-YU-npz" secondAttribute="leading" constant="94" id="YDi-2Y-Ncz"/>
+                            <constraint firstItem="qfL-YU-npz" firstAttribute="trailing" secondItem="K2P-Py-QLD" secondAttribute="trailing" constant="83" id="YYb-93-TZa"/>
+                            <constraint firstItem="qfL-YU-npz" firstAttribute="trailing" secondItem="ySt-3y-APN" secondAttribute="trailing" constant="73" id="bi9-2V-g5n"/>
+                            <constraint firstItem="EX4-hQ-se3" firstAttribute="leading" secondItem="qfL-YU-npz" secondAttribute="leading" constant="83" id="etN-yu-DNP"/>
+                            <constraint firstItem="K2P-Py-QLD" firstAttribute="top" secondItem="482-Bo-Yj5" secondAttribute="bottom" constant="8" id="g7F-dl-kE9"/>
+                            <constraint firstItem="qfL-YU-npz" firstAttribute="trailing" secondItem="482-Bo-Yj5" secondAttribute="trailing" constant="73" id="hRb-jN-DKy"/>
+                            <constraint firstItem="ySt-3y-APN" firstAttribute="leading" secondItem="qfL-YU-npz" secondAttribute="leading" constant="94" id="iPv-8L-IiZ"/>
+                            <constraint firstItem="EX4-hQ-se3" firstAttribute="top" secondItem="K2P-Py-QLD" secondAttribute="bottom" constant="40" id="n2p-ec-MB4"/>
+                            <constraint firstItem="qfL-YU-npz" firstAttribute="trailing" secondItem="EX4-hQ-se3" secondAttribute="trailing" constant="83" id="w0a-Sa-y7Y"/>
+                            <constraint firstItem="EX4-hQ-se3" firstAttribute="top" secondItem="ySt-3y-APN" secondAttribute="bottom" constant="8" id="w25-Xl-GBK"/>
+                            <constraint firstItem="qfL-YU-npz" firstAttribute="bottom" secondItem="EX4-hQ-se3" secondAttribute="bottom" constant="82" id="zhk-r6-VrG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qfL-YU-npz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="85r-Tw-7YX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="946" y="-54"/>
+        </scene>
+    </scenes>
+</document>
