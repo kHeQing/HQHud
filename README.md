@@ -41,3 +41,6 @@ extension UIView {
     
 }
 ```
+
+![](https://github.com/kHeQing/HQHud/blob/master/01.png)
+![](https://github.com/kHeQing/HQHud/blob/master/02.png)
